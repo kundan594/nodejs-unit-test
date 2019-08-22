@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>NodeJS A</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="id=edge">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="jumbotron">
+            <h1>NodeJS Application</h1>
+            <p>NodeJS, MongoDB, and Bootstrap for developing responsive, mobile-first projects on the web.</p>
+            <p>Use docker-compose</p>
+        </div>
+        <form method="post" action="/item/add">
+            <label for="name">Name</label>
+            <input type="text" name="name" />
+            <input type="submit" value="Add" />
+        </form>
+        <h4>Items:</h4>
+        <ul>
+            <% items.forEach(function(item) { %>
+            <li>
+                <%= item.name %>
+            </li>
+            <% }); %>
+        </ul>
+    </div>
+
+</body>
+
+</html>
