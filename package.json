@@ -1,7 +1,7 @@
 {
-  "name": "nodejs-mongodb-docker-compose",
+  "name": "nodejs-unit-test",
   "version": "1.0.0",
-  "description": "A simple Node.js and MongoDB with docker-compose",
+  "description": "Node.js with unit test",
   "main": "main.js",
   "scripts": {
     "start": "node main.js"
