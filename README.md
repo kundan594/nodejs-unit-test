@@ -12,3 +12,6 @@ Node.js with unit test.
 * cd Node.js-Unit-Test
 * docker-compose build
 * docker-compose up -d
+
+## Additional Install
+* npm i -g npm && npm i mocha istanbul -g

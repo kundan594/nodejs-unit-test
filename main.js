@@ -12,10 +12,10 @@ mongoose
         'mongodb://mongo:27017/docker-node-mongo',
         { useNewUrlParser: true }
     )
-    .then(() => console.log('MongoDB Connected Successfully !'))
+    .then(() => console.log('MongoDB connected successfully !'))
     .catch(err => console.log(err));
 
-const Item = require('./models/item.model');
+const Item = require('./models/item');
 
 app.get('/', (req, res) => {
     Item.find()

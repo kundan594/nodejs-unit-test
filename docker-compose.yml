@@ -10,9 +10,16 @@ services:
       - .:/usr/src/app
     links:
       - mongo
-  
+    networks: 
+      - nodejs-network
+        
   mongo:
     container_name: nodejs-mongodb
     image: mongo
     ports:
       - '27017:27017'
+    networks: 
+      - nodejs-network
+
+networks: 
+  nodejs-network:
