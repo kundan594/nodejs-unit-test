@@ -2,37 +2,133 @@
 <html lang="en">
 
 <head>
-    <title>node.js</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="X-UA-Compatible" content="id=edge">
 
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Node.js MVC</title>
+  <link href="/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/css/business-frontpage.css" rel="stylesheet">
+
 </head>
 
 <body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
-        <div class="jumbotron">
-            <h1>node.js web application</h1>
-            <p>node.js, mongoDB, and bootstrap for developing responsive, mobile-first projects on the web.</p>
-            <p>with docker container</p>
-        </div>
-        <form method="post" action="/item/add">
-            <label for="name">Name</label>
-            <input type="text" name="name" />
-            <input type="submit" value="Add" />
-        </form>
-        <h4>Items:</h4>
-        <ul>
-            <% items.forEach(function(item) { %>
-            <li>
-                <%= item.name %>
-            </li>
-            <% }); %>
+      <a class="navbar-brand" href="#">Node.js Application</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
         </ul>
+      </div>
     </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="bg-primary py-5 mb-5">
+    <div class="container h-100">
+      <div class="row h-100 align-items-center">
+        <div class="col-lg-12">
+          <h1 class="display-4 text-white mt-5 mb-2">Business Name or Tagline</h1>
+          <p class="lead mb-5 text-white-50">This is an sample of node.js web application to demonstrate on how to use
+            node.js and express.js framework to develop web app with MVC concept. It is a simple Web API integrating
+            with mongoDB and develop under docker container environment. It demonstrate on how to write JavaScript Unit
+            Test also by using mocha and sinon framework.</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-8 mb-5">
+        <h2>What We Do</h2>
+        <hr>
+        <p>This is an sample of node.js web application to demonstrate on how to use
+          node.js and express.js framework to develop web app with MVC concept. It is a simple Web API integrating
+          with mongoDB and develop under docker container environment. It demonstrate on how to write JavaScript Unit
+          Test also by using mocha and sinon framework.</p>
+        <p>Add a new card title here ...</p>
+        <form method="post" action="/item/add">
+          <div class="form-group">
+            <label for="cardTitle">Card Title</label>
+            <input type="text" name="name" class="form-control" id="cardTitle" placeholder="Card Title">
+            <small id="cardTitleHelp" class="form-text text-muted">Please input a new card title and click the add card
+              button.</small>
+          </div>
+          <button type="submit" class="btn btn-primary">Add Card</button>
+        </form>
+      </div>
+      <div class="col-md-4 mb-5">
+        <h2>Contact Us</h2>
+        <hr>
+        <address>
+          <strong>Node.js App</strong>
+          <p>
+              <a href="https://github.com/khachornchit">https://github.com/khachornchit</a>
+          </p>
+        </address>
+      </div>
+    </div>
+    <!-- /.row -->
+
+    <div class="row">
+      <% items.forEach(function(item) { %>
+      <div class="col-md-4 mb-5">
+        <div class="card h-100">
+          <img class="card-img-top" src="http://placehold.it/300x200" alt="">
+          <div class="card-body">
+            <h4 class="card-title"><%= item.name %></h4>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus
+              neque sequi doloribus.</p>
+          </div>
+          <div class="card-footer">
+            <a href="#" class="btn btn-primary">Find Out More!</a>
+          </div>
+        </div>
+      </div>
+      <% }); %>
+    </div>
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="/vendor/jquery/jquery.min.js"></script>
+  <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 </html>
