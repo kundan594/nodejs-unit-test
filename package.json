@@ -6,6 +6,7 @@
   "scripts": {
     "test": "jest",
     "mochatest": "_mocha tests/*.spec.js",
+    "mochabadgegen": "mocha --reporter mocha-badge-generator",
     "start": "node main.js"
   },
   "author": "",
