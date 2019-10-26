@@ -9,13 +9,10 @@ This is an sample of node.js web application to demonstrate on how to use node.j
 * node.js, express.js, mongoDB
 * mocha, sinon
 * CICD integration
-* Node.js, Express.js, MongoDB
-* Unit test, Mocha, sinon
-* docker, docker-compose
 
 ## Getting started
-* git clone git@github.com:Khachornchit/Node.js-Unit-Test.git
-* cd Node.js-Unit-Test
+* git clone git@github.com:Khachornchit/nodejs-unit-test.git
+* cd nodejs-unit-test
 * docker-compose build
 * docker-compose up -d
 
