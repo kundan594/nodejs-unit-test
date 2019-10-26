@@ -35,3 +35,5 @@ jobs:
 
       # run tests!
       - run: yarn test
+      - run: yarn global add mocha
+      - run: yarn mochatest      
